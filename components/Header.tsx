@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const NAV = [
-  { label: "ดูแลอะไร",   href: "#pillars" },
+  { label: "วิธีทำงาน",  href: "#how" },
   { label: "Community",  href: "#community" },
   { label: "บริการ",     href: "#services" },
-  { label: "ประเมิน",    href: "#assessment" },
-  { label: "ติดต่อ",     href: "#contact" },
+  { label: "ทีมเรา",     href: "#coaches" },
+  { label: "FAQ",        href: "#faq" },
 ];
 
 export function Header() {

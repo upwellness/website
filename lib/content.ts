@@ -14,6 +14,139 @@ export const SITE = {
   phone: "—",
 };
 
+/* ─── Sticky Metric (Whoop-inspired headline anchor) ─── */
+export const STICKY_METRIC = {
+  value: "−12.3 kg",
+  label: "ค่าเฉลี่ยที่ลูกค้าลดได้ใน 60 วัน · Full Course",
+  caveat: "*ผลขึ้นกับแต่ละบุคคล",
+};
+
+/* ─── Numeric Proof Bar ─────────────────────── */
+export const PROOF_METRICS = [
+  { value: "300+",    label: "คน",                  context: "ลูกค้าที่ดูแลตั้งแต่ปี 2562" },
+  { value: "7 ปี",   label: "ประสบการณ์",          context: "Wellness Coaching ใน Bangkok" },
+  { value: "12,000+", label: "BCA วัด",            context: "ติดตามผลกาย-ใจอย่างจริงจัง" },
+  { value: "98%",     label: "ความพึงพอใจ",         context: "จาก survey ลูกค้า 3 รอบล่าสุด" },
+];
+
+/* ─── Manifesto · "Why we're different" ─────── */
+export const MANIFESTO = {
+  eyebrow: "Why UP Wellness",
+  title: "ไม่ใช่ MLM · ไม่ใช่ Clinic · ไม่ใช่ Gym",
+  subtitle: "เราอยู่ตรงกลางระหว่างทั้ง 3 อย่าง · เอาที่ดีที่สุดของแต่ละมารวมกัน",
+  beliefs: [
+    {
+      hed: "Evidence ก่อน Anecdote",
+      sub: "ทุก protocol อ้างอิงงานวิจัย peer-reviewed · ไม่ใช่กระแส · ไม่ใช่ testimonial เดี่ยวๆ",
+    },
+    {
+      hed: "Personalize ทุกคน",
+      sub: "ไม่มี ‘one-size-fits-all’ · เราอ่านผลเลือด · BCA · CGM ก่อนออกแบบโปรแกรม",
+    },
+    {
+      hed: "Community ที่อยู่ได้นาน",
+      sub: "Longevity เกิดจาก lifestyle ที่ยั่งยืน · ไม่ใช่ใจฮึดคนเดียว · เราจัดกิจกรรมหลากหลาย",
+    },
+    {
+      hed: "ตัวเลขก่อนตัดสินใจ",
+      sub: "ทุกคนได้ Body Composition Analysis ก่อนเริ่ม · เห็น progress จริงทุก 14 วัน",
+    },
+  ],
+};
+
+/* ─── How It Works · 3-step process ─────────── */
+export const PROCESS = [
+  {
+    step: 1,
+    title: "Assess",
+    blurb: "ประเมินรายคน",
+    detail: "เริ่มจากแบบประเมินฟรี · BCA วัดส่วนประกอบร่างกาย · อ่านผลเลือดถ้ามี · ฟังเป้าหมายของคุณ",
+    duration: "30-60 นาที",
+  },
+  {
+    step: 2,
+    title: "Plan",
+    blurb: "ออกแบบโปรแกรมเฉพาะคุณ",
+    detail: "Stack วิตามิน + อาหารที่เหมาะ · ตั้ง milestones 14 วัน · เลือก community activity ที่ลงตัว",
+    duration: "1 สัปดาห์",
+  },
+  {
+    step: 3,
+    title: "Live",
+    blurb: "อยู่กับมันให้สนุก",
+    detail: "Coach ตามทาง LINE · BCA ทุก 14 วัน · ปรับ stack ตามผล · มี community ให้ไปได้ทุกสัปดาห์",
+    duration: "14 / 60 / 365 วัน",
+  },
+];
+
+/* ─── Coach Team (placeholder · update with real) ─── */
+export const COACHES = [
+  {
+    name: "ก. ขจิต",
+    role: "Founder · Wellness Coach",
+    credentials: "7+ ปี · Certified Nutrition Specialist",
+    focus: "Anti-aging · Longevity Protocol",
+    initials: "KJ",
+  },
+  {
+    name: "พี่จิ้น",
+    role: "Co-founder · Program Director",
+    credentials: "Operations + Brand · 5+ ปี",
+    focus: "Customer journey · Community",
+    initials: "JN",
+  },
+  {
+    name: "ทีมโภชนาการ",
+    role: "Nutrition Specialists",
+    credentials: "ป.ตรี-โท นักโภชนาการ + Nutrilite cert",
+    focus: "Personalized stack · meal design",
+    initials: "RD",
+  },
+  {
+    name: "ทีม Community",
+    role: "Event Leaders",
+    credentials: "Certified Run Coach · Yoga RYT-200 · ICF Coach",
+    focus: "Run · Bike · Ice Bath · Forest Bathing",
+    initials: "CC",
+  },
+];
+
+/* ─── FAQ · Trust through candor ────────────── */
+export const FAQ = [
+  {
+    q: "UP Wellness คือ Amway / Nutrilite ใช่ไหม?",
+    a: "ใช่ส่วนหนึ่ง · เราเป็น Amway Business Owner ที่ทำธุรกิจอย่างมืออาชีพ และใช้ Nutrilite (global #1 vitamin brand) เป็น tool · แต่งานของเราคือ wellness coaching ไม่ใช่ขายของ · เราแนะนำสินค้าตามที่เหมาะกับลูกค้าจริงๆ ไม่ใช่ตามโควตาขาย",
+  },
+  {
+    q: "ต่างจาก clinic / gym ทั่วไปยังไง?",
+    a: "Clinic เน้นรักษาโรค · gym เน้นออกกำลังกาย · เราเน้น lifestyle ทั้งระบบ · กิน + นอน + ขยับ + ใจ · มี Community พาไปทุกสัปดาห์ · ใช้ Nutrilite supplement เป็น tool เสริม ไม่ใช่ตัวเอก",
+  },
+  {
+    q: "ราคาเริ่มที่เท่าไหร่?",
+    a: "Health Check ทำได้ฟรี · UP Labs 14 วันเริ่ม 4,999 บาท · Full Course 60 วัน 38,000-50,000 บาท · ไม่มี hidden fee · ดูในตาราง Service Ladder",
+  },
+  {
+    q: "ต้องเป็นสมาชิก Amway ก่อนไหม?",
+    a: "ไม่จำเป็น · ลูกค้าซื้อ Nutrilite ผ่านเราในฐานะลูกค้าทั่วไปได้ · ถ้าสนใจสมัครสมาชิกก็ได้ราคาดีกว่า · แต่ไม่บังคับ",
+  },
+  {
+    q: "ผลรับประกันไหม?",
+    a: "ไม่รับประกัน · ผลขึ้นกับการลงมือทำของแต่ละคน · แต่เรามี BCA วัดทุก 14 วัน · ถ้าไม่เห็น progress เราปรับแผนทันที · ค่าเฉลี่ย Full Course ลดได้ 8-20 kg ใน 60 วัน",
+  },
+  {
+    q: "Coach ดูแลใกล้ชิดแค่ไหน?",
+    a: "Full Course · LINE 1:1 ทุกวัน + นัดติดตามรายสัปดาห์ · UP Labs · ตอบ LINE ใน 24 ชม. · community events 4-6 ครั้ง/เดือน · ไม่ใช่ chatbot · เราคุยกันจริง",
+  },
+  {
+    q: "ถ้ามีโรคประจำตัวต้องทำยังไง?",
+    a: "ต้องแจ้งก่อนเริ่มโปรแกรม · เราจะปรับ stack + protocol ให้เหมาะ · บางกรณีจะแนะนำให้พบแพทย์ก่อน · ไม่ใช่ทุกเคสที่เราจะรับ · health safety มาก่อนรายได้",
+  },
+  {
+    q: "Community ต้องเป็นลูกค้าก่อนไหม?",
+    a: "ไม่ต้อง · ลอง Run Club / Forest Bathing ครั้งแรกฟรี · ถ้าชอบค่อยตัดสินใจต่อ · เป็น community ที่เปิดสำหรับคนสนใจ wellness ทุกคน",
+  },
+];
+
 /* ─── Pillars (What We Do) ───────────────────── */
 export const PILLARS = [
   {
