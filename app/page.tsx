@@ -6,7 +6,7 @@ import { Pillars } from "@/components/Pillars";
 import { Process } from "@/components/Process";
 import { Community } from "@/components/Community";
 import { Services } from "@/components/Services";
-import { Coaches } from "@/components/Coaches";
+import { Philosophy } from "@/components/Philosophy";
 import { Assessment } from "@/components/Assessment";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
@@ -25,7 +25,7 @@ export default function Home() {
         <Process />
         <Community />
         <Services />
-        <Coaches />
+        <Philosophy />
         <Assessment />
         <Testimonials />
         <FAQ />

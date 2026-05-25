@@ -7,20 +7,26 @@ export function Hero() {
       <div className="mx-auto max-w-7xl">
         {/* Eyebrow */}
         <p className="text-center font-mono text-[10.5px] uppercase tracking-[0.24em] text-rose">
-          Science-based Longevity · Wellness Community · Est. 2562
+          Science-based Longevity · Wellness Community · Est. 2558
         </p>
 
-        {/* Headline · massive editorial */}
-        <h1 className="mt-8 text-center font-serif font-semibold text-ink leading-[0.96] tracking-[-0.025em] text-[64px] sm:text-[88px] md:text-[112px] lg:text-[136px]">
-          แก่ช้า ไม่ป่วย
+        {/* Headline · massive editorial · English anchor */}
+        <h1 className="mt-8 text-center font-serif font-semibold text-ink leading-[0.96] tracking-[-0.025em] text-[64px] sm:text-[88px] md:text-[112px] lg:text-[128px]">
+          Live <em className="not-italic text-rose font-medium italic">Longer</em>.
           <br />
-          <em className="not-italic text-rose font-medium italic">
-            ตายเลย<span aria-hidden="true">.</span>
-          </em>
+          Live <em className="not-italic text-rose font-medium italic">Better</em>.
         </h1>
 
-        {/* Sub */}
-        <p className="mt-10 mx-auto max-w-2xl text-center text-[17px] md:text-[19px] text-ink-60 leading-[1.55]">
+        {/* Thai philosophical statement · the heart */}
+        <p className="mt-10 mx-auto max-w-3xl text-center font-serif text-[22px] sm:text-[28px] md:text-[34px] font-medium text-ink leading-[1.35] tracking-tight">
+          ความรู้ที่ถูกต้อง · ทำให้การดูแลสุขภาพ
+          <br className="hidden sm:block" />
+          <span className="sm:hidden"> </span>
+          เป็นเรื่องง่ายของทุกคน
+        </p>
+
+        {/* Sub · supporting promise */}
+        <p className="mt-7 mx-auto max-w-2xl text-center text-[15px] md:text-[17px] text-ink-60 leading-[1.6]">
           {SITE.promise}
           <br />
           <span className="text-ink-40">
@@ -28,16 +34,16 @@ export function Hero() {
           </span>
         </p>
 
-        {/* Sticky metric · Whoop-inspired anchor */}
+        {/* Sticky metric · social proof anchor */}
         <div className="mt-12 md:mt-16 flex justify-center">
-          <div className="liquid liquid-shine rounded-3xl px-8 py-7 md:px-12 md:py-9 text-center max-w-md">
-            <div className="font-serif text-[64px] md:text-[88px] font-bold leading-[0.9] text-rose tracking-tight">
+          <div className="liquid liquid-shine rounded-3xl px-10 py-8 md:px-16 md:py-10 text-center max-w-xl">
+            <div className="font-serif text-[80px] md:text-[112px] font-bold leading-[0.85] text-rose tracking-tight">
               {STICKY_METRIC.value}
             </div>
-            <p className="mt-3 font-thai text-[14px] md:text-[15px] text-ink leading-snug">
+            <p className="mt-4 font-thai text-[15px] md:text-[17px] font-medium text-ink leading-snug">
               {STICKY_METRIC.label}
             </p>
-            <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-ink-40">
+            <p className="mt-2 font-mono text-[10px] uppercase tracking-wider text-ink-40">
               {STICKY_METRIC.caveat}
             </p>
           </div>

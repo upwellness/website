@@ -1,6 +1,9 @@
 import Link from "next/link";
-import { Check, ArrowRight, Pill } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import { SERVICES } from "@/lib/content";
+
+// Show 'บาท' unit only if price contains digits
+const hasNumericPrice = (p: string) => /\d/.test(p);
 
 const ACCENT: Record<string, { ring: string; chip: string; chipText: string; popular?: boolean }> = {
   free:   { ring: "ring-1 ring-ink/10",                  chip: "bg-cream-deep",    chipText: "text-ink-60" },
@@ -51,10 +54,12 @@ export function Services() {
 
                 <div className="mt-5 pb-5 border-b border-ink/8">
                   <div className="flex items-baseline gap-1.5">
-                    <span className="font-serif text-[32px] md:text-[36px] font-bold text-ink leading-none tracking-tight">
+                    <span className={`font-serif font-bold text-ink leading-none tracking-tight ${
+                      hasNumericPrice(s.price) ? "text-[32px] md:text-[36px]" : "text-[22px] md:text-[26px]"
+                    }`}>
                       {s.price}
                     </span>
-                    {s.price !== "ฟรี" && <span className="text-[11px] text-ink-60">บาท</span>}
+                    {hasNumericPrice(s.price) && <span className="text-[11px] text-ink-60">บาท</span>}
                   </div>
                   <p className="mt-1.5 font-mono text-[10px] uppercase tracking-widest text-ink-60">{s.duration}</p>
                 </div>
@@ -83,36 +88,6 @@ export function Services() {
           })}
         </div>
 
-        {/* Supplement strip */}
-        <div className="mt-16 liquid liquid-shine rounded-3xl p-8 md:p-10 grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-rose-mist text-rose px-3 py-1 font-mono text-[10px] uppercase tracking-[0.16em] font-semibold">
-              <Pill size={12} strokeWidth={2.5} /> Nutrilite Supplements
-            </div>
-            <h3 className="mt-4 font-serif text-[28px] md:text-[36px] font-semibold text-ink leading-[1.1] tracking-tight">
-              เสริมตรงจุด · <em className="text-rose not-italic italic">จัด Stack ตามแผน</em>
-            </h3>
-            <p className="mt-4 text-[15px] text-ink-60 leading-[1.7]">
-              Nutrilite global #1 vitamin brand by sales · เรามี catalog Thailand 30+ SKUs ที่ verified ราคา + ส่วนผสม
-              · ทีม coach แนะนำ stack ตามผลตรวจของคุณ · ไม่ใช่ขายแบบ MLM ทั่วไป
-            </p>
-          </div>
-          <ul className="grid grid-cols-2 gap-2.5 text-[12.5px]">
-            {[
-              ["Triple Omega", "หัวใจ · สมอง"],
-              ["Double X", "Multivitamin พรีเมียม"],
-              ["Vitamin B Plus", "พลังงาน"],
-              ["Bio C Plus", "ภูมิคุ้มกัน"],
-              ["Cal Mag D", "กระดูก"],
-              ["Probiotic W", "ลำไส้"],
-            ].map(([name, role]) => (
-              <li key={name} className="rounded-xl bg-white/60 border border-ink/8 px-3.5 py-2.5">
-                <div className="font-semibold text-ink">{name}</div>
-                <div className="text-ink-60 text-[11px]">{role}</div>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </section>
   );

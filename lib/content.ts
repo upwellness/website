@@ -10,46 +10,51 @@ export const SITE = {
   tagline: "Science-based Longevity & Wellness Community",
   promise: "ที่ปรึกษาสุขภาพมืออาชีพ · ดูแลแบบ personalized · evidence-based",
   lineOA: "@upwellness",
-  email: "hello@upwellness.co.th",
-  phone: "—",
+  email: "ckawin@hotmail.com",
+  phone: "TODO",              // ⚠️ ใส่เบอร์จริง
+  facebook: "upwellness",      // facebook.com/upwellness · ⚠️ TODO confirm
+  instagram: "upwellness",     // instagram.com/upwellness · ⚠️ TODO confirm
+  foundedYear: 2558,           // พ.ศ. · CE 2015
+  foundedYearCE: 2015,
+  yearsExperience: 11,         // 2569 − 2558
 };
 
 /* ─── Sticky Metric (Whoop-inspired headline anchor) ─── */
 export const STICKY_METRIC = {
-  value: "−12.3 kg",
-  label: "ค่าเฉลี่ยที่ลูกค้าลดได้ใน 60 วัน · Full Course",
-  caveat: "*ผลขึ้นกับแต่ละบุคคล",
+  value: "1,000+",
+  label: "คนที่เปลี่ยนชีวิตได้แล้ว · ด้วย UP Wellness",
+  caveat: "*ลูกค้าสะสมตั้งแต่ปี 2558 · ผลขึ้นกับแต่ละบุคคล",
 };
 
 /* ─── Numeric Proof Bar ─────────────────────── */
 export const PROOF_METRICS = [
-  { value: "300+",    label: "คน",                  context: "ลูกค้าที่ดูแลตั้งแต่ปี 2562" },
-  { value: "7 ปี",   label: "ประสบการณ์",          context: "Wellness Coaching ใน Bangkok" },
-  { value: "12,000+", label: "BCA วัด",            context: "ติดตามผลกาย-ใจอย่างจริงจัง" },
-  { value: "98%",     label: "ความพึงพอใจ",         context: "จาก survey ลูกค้า 3 รอบล่าสุด" },
+  { value: "1,000+",  label: "ลูกค้า",              context: "เปลี่ยนชีวิตได้แล้วตั้งแต่ปี 2558" },
+  { value: "11 ปี",   label: "ประสบการณ์",          context: "Wellness Coaching ใน Bangkok" },
+  { value: "12 ตัน",  label: "น้ำหนักลดรวม",        context: "สะสมจากลูกค้าทุกคนตลอด 11 ปี" },
+  { value: "15+",     label: "Events/เดือน",        context: "Run · Bike · Ice Bath · Forest · Board · Finance · Education" },
 ];
 
 /* ─── Manifesto · "Why we're different" ─────── */
 export const MANIFESTO = {
   eyebrow: "Why UP Wellness",
-  title: "ไม่ใช่ MLM · ไม่ใช่ Clinic · ไม่ใช่ Gym",
-  subtitle: "เราอยู่ตรงกลางระหว่างทั้ง 3 อย่าง · เอาที่ดีที่สุดของแต่ละมารวมกัน",
+  title: "หมอ · โค้ช · เพื่อน · ในที่เดียว",
+  subtitle: "เราเอาความรู้ทางการแพทย์ · ความใส่ใจของโค้ช · และความอบอุ่นของเพื่อน มารวมไว้ในระบบเดียวที่ดูแลคุณได้ตลอดทาง",
   beliefs: [
     {
-      hed: "Evidence ก่อน Anecdote",
-      sub: "ทุก protocol อ้างอิงงานวิจัย peer-reviewed · ไม่ใช่กระแส · ไม่ใช่ testimonial เดี่ยวๆ",
+      hed: "งานวิจัยนำทาง · ไม่ใช่กระแส",
+      sub: "ทุก protocol อ้างอิงงานวิจัย peer-reviewed · ไม่ใช้คำว่า ‘หายจริง’ โดยไม่มีหลักฐาน · เราพูดในสิ่งที่พิสูจน์ได้",
     },
     {
-      hed: "Personalize ทุกคน",
-      sub: "ไม่มี ‘one-size-fits-all’ · เราอ่านผลเลือด · BCA · CGM ก่อนออกแบบโปรแกรม",
+      hed: "คนละแบบกัน · คนละโปรแกรม",
+      sub: "ผลเลือดของคุณ · BCA ของคุณ · CGM ของคุณ — คือสิ่งที่บอกว่าโปรแกรมต้องเป็นยังไง · ไม่มีสูตรสำเร็จเดียวกัน",
     },
     {
-      hed: "Community ที่อยู่ได้นาน",
-      sub: "Longevity เกิดจาก lifestyle ที่ยั่งยืน · ไม่ใช่ใจฮึดคนเดียว · เราจัดกิจกรรมหลากหลาย",
+      hed: "เราไม่ปล่อยให้คุณเดินคนเดียว",
+      sub: "Run Club · Bike · Ice Bath · Forest Bathing · มีกิจกรรมทุกสัปดาห์ · ในที่ที่มีคนเดินด้วย · เปลี่ยน lifestyle ทีละนิด · ไม่ต้องใช้ใจฮึด",
     },
     {
-      hed: "ตัวเลขก่อนตัดสินใจ",
-      sub: "ทุกคนได้ Body Composition Analysis ก่อนเริ่ม · เห็น progress จริงทุก 14 วัน",
+      hed: "ตัวเลขเล่าความจริง · ทุก 14 วัน",
+      sub: "ทุกคนชั่ง BCA ก่อนเริ่ม · ทุก 14 วันได้รู้ว่าน้ำหนัก ไขมัน กล้ามเนื้อ Visceral เปลี่ยนยังไง · ไม่ใช่แค่ ‘รู้สึกดีขึ้น’",
     },
   ],
 };
@@ -59,91 +64,72 @@ export const PROCESS = [
   {
     step: 1,
     title: "Assess",
-    blurb: "ประเมินรายคน",
-    detail: "เริ่มจากแบบประเมินฟรี · BCA วัดส่วนประกอบร่างกาย · อ่านผลเลือดถ้ามี · ฟังเป้าหมายของคุณ",
-    duration: "30-60 นาที",
+    blurb: "เริ่มจากรู้จักตัวเองก่อน",
+    detail: "ทำแบบประเมินฟรี · ชั่ง BCA ดูว่าตอนนี้กล้ามเนื้อกับไขมันเป็นยังไง · ถ้ามีผลเลือดล่าสุดก็อ่านให้ฟัง · เล่าให้เราฟังว่าอยากเปลี่ยนอะไร",
+    duration: "30-60 นาที · ไม่ต้องจ่ายอะไร",
   },
   {
     step: 2,
     title: "Plan",
-    blurb: "ออกแบบโปรแกรมเฉพาะคุณ",
-    detail: "Stack วิตามิน + อาหารที่เหมาะ · ตั้ง milestones 14 วัน · เลือก community activity ที่ลงตัว",
-    duration: "1 สัปดาห์",
+    blurb: "ออกแบบให้เหมาะกับคุณคนเดียว",
+    detail: "เราจัด stack วิตามินกับอาหารที่ตรงกับร่างกายคุณ · ตั้งเป้า 14 วันแรกแบบไม่กดดัน · เลือก community activity ที่คุณชอบ — ไม่ใช่ที่เรายัด",
+    duration: "1 สัปดาห์ · เตรียมตัว",
   },
   {
     step: 3,
     title: "Live",
-    blurb: "อยู่กับมันให้สนุก",
-    detail: "Coach ตามทาง LINE · BCA ทุก 14 วัน · ปรับ stack ตามผล · มี community ให้ไปได้ทุกสัปดาห์",
-    duration: "14 / 60 / 365 วัน",
+    blurb: "อยู่กับมันให้สบาย · ไม่ต้องฝืน",
+    detail: "Coach ตอบ LINE ทุกวัน · ชั่ง BCA ทุก 14 วันให้รู้ว่าเดินถูกทางไหม · ปรับแผนเรื่อยๆ ตามที่ร่างกายตอบ · มี community ให้เจอเพื่อนได้ทุกสัปดาห์",
+    duration: "14 / 60 / 365 วัน · เลือกจังหวะเอง",
   },
 ];
 
-/* ─── Coach Team (placeholder · update with real) ─── */
-export const COACHES = [
-  {
-    name: "ก. ขจิต",
-    role: "Founder · Wellness Coach",
-    credentials: "7+ ปี · Certified Nutrition Specialist",
-    focus: "Anti-aging · Longevity Protocol",
-    initials: "KJ",
-  },
-  {
-    name: "พี่จิ้น",
-    role: "Co-founder · Program Director",
-    credentials: "Operations + Brand · 5+ ปี",
-    focus: "Customer journey · Community",
-    initials: "JN",
-  },
-  {
-    name: "ทีมโภชนาการ",
-    role: "Nutrition Specialists",
-    credentials: "ป.ตรี-โท นักโภชนาการ + Nutrilite cert",
-    focus: "Personalized stack · meal design",
-    initials: "RD",
-  },
-  {
-    name: "ทีม Community",
-    role: "Event Leaders",
-    credentials: "Certified Run Coach · Yoga RYT-200 · ICF Coach",
-    focus: "Run · Bike · Ice Bath · Forest Bathing",
-    initials: "CC",
-  },
-];
+/* ─── Our Philosophy (replaces Coaches) ──────── */
+export const PHILOSOPHY = {
+  eyebrow: "Our Philosophy",
+  title: "เราเชื่อว่า สุขภาพดี ไม่ได้ซับซ้อน",
+  subtitle: "แต่ต้องรู้จักร่างกายตัวเองก่อน · แล้วทำให้ถูกที่ · ในจังหวะที่พอดี",
+  principles: [
+    {
+      hed: "ดูแลตัวเองก่อน · ค่อยพึ่งยา",
+      sub: "นอน · อาหาร · การขยับ คือยาที่ดีที่สุด · supplement และยา เป็นแค่ตัวเสริมเมื่อพื้นฐานพร้อม",
+    },
+    {
+      hed: "เปลี่ยนทีละนิด ดีกว่าหักโหม",
+      sub: "เปลี่ยน 1% ทุกวัน สะสมเป็น 365% ใน 1 ปี · พลังของ compound interest ใช้ได้กับสุขภาพเหมือนการเงิน",
+    },
+    {
+      hed: "Healthspan ไม่ใช่แค่ Lifespan",
+      sub: "เราไม่ได้อยากให้คุณ ‘อยู่นาน’ อย่างเดียว · เราอยากให้คุณ ‘อยู่นานอย่างมีคุณภาพ’ · เดินได้ คิดได้ ใช้ชีวิตได้จนวันสุดท้าย",
+    },
+    {
+      hed: "ถามให้ถูก ก่อนทำให้ตรง",
+      sub: "ตรวจร่างกาย · BCA · CGM · ผลเลือด · มาก่อนการตัดสินใจว่าจะกินอะไร เลิกอะไร เพิ่มอะไร · ‘เดา’ ไม่ใช่วิธีของเรา",
+    },
+  ],
+};
 
 /* ─── FAQ · Trust through candor ────────────── */
 export const FAQ = [
   {
-    q: "UP Wellness คือ Amway / Nutrilite ใช่ไหม?",
-    a: "ใช่ส่วนหนึ่ง · เราเป็น Amway Business Owner ที่ทำธุรกิจอย่างมืออาชีพ และใช้ Nutrilite (global #1 vitamin brand) เป็น tool · แต่งานของเราคือ wellness coaching ไม่ใช่ขายของ · เราแนะนำสินค้าตามที่เหมาะกับลูกค้าจริงๆ ไม่ใช่ตามโควตาขาย",
-  },
-  {
-    q: "ต่างจาก clinic / gym ทั่วไปยังไง?",
-    a: "Clinic เน้นรักษาโรค · gym เน้นออกกำลังกาย · เราเน้น lifestyle ทั้งระบบ · กิน + นอน + ขยับ + ใจ · มี Community พาไปทุกสัปดาห์ · ใช้ Nutrilite supplement เป็น tool เสริม ไม่ใช่ตัวเอก",
+    q: "ต่างจาก clinic หรือ gym ทั่วไปยังไง?",
+    a: "Clinic เน้นรักษาโรคที่เป็นแล้ว · gym เน้นออกกำลังกายอย่างเดียว · ส่วนเราดูแลทั้งวิถีชีวิต — กิน · นอน · ขยับ · ใจ — พร้อม Community ที่ไปทำกิจกรรมร่วมกันทุกสัปดาห์ · เราอยู่ตรงกลางระหว่างแพทย์ · โค้ช · และเพื่อน",
   },
   {
     q: "ราคาเริ่มที่เท่าไหร่?",
-    a: "Health Check ทำได้ฟรี · UP Labs 14 วันเริ่ม 4,999 บาท · Full Course 60 วัน 38,000-50,000 บาท · ไม่มี hidden fee · ดูในตาราง Service Ladder",
-  },
-  {
-    q: "ต้องเป็นสมาชิก Amway ก่อนไหม?",
-    a: "ไม่จำเป็น · ลูกค้าซื้อ Nutrilite ผ่านเราในฐานะลูกค้าทั่วไปได้ · ถ้าสนใจสมัครสมาชิกก็ได้ราคาดีกว่า · แต่ไม่บังคับ",
-  },
-  {
-    q: "ผลรับประกันไหม?",
-    a: "ไม่รับประกัน · ผลขึ้นกับการลงมือทำของแต่ละคน · แต่เรามี BCA วัดทุก 14 วัน · ถ้าไม่เห็น progress เราปรับแผนทันที · ค่าเฉลี่ย Full Course ลดได้ 8-20 kg ใน 60 วัน",
+    a: "Health Check ทำได้ฟรีบนเว็บนี้เลย · ส่วนโปรแกรมที่เหลือ — เพราะเราออกแบบเฉพาะแต่ละคน ราคาเลยขึ้นกับความซับซ้อนของเป้าหมาย · ทักทาง LINE มาก่อน เราจะคำนวณให้แบบไม่กดดัน · ไม่มี hidden fee · ไม่ขายของที่ไม่จำเป็น",
   },
   {
     q: "Coach ดูแลใกล้ชิดแค่ไหน?",
-    a: "Full Course · LINE 1:1 ทุกวัน + นัดติดตามรายสัปดาห์ · UP Labs · ตอบ LINE ใน 24 ชม. · community events 4-6 ครั้ง/เดือน · ไม่ใช่ chatbot · เราคุยกันจริง",
+    a: "Full Course · LINE 1:1 ทุกวัน + นัดติดตามรายสัปดาห์ · UP Labs · ตอบ LINE ใน 24 ชั่วโมง · Community events มีให้ไปทุกสัปดาห์ · ไม่ใช่ chatbot · ไม่ใช่ outsource · เป็นทีมของเราคุยกันจริง",
   },
   {
-    q: "ถ้ามีโรคประจำตัวต้องทำยังไง?",
-    a: "ต้องแจ้งก่อนเริ่มโปรแกรม · เราจะปรับ stack + protocol ให้เหมาะ · บางกรณีจะแนะนำให้พบแพทย์ก่อน · ไม่ใช่ทุกเคสที่เราจะรับ · health safety มาก่อนรายได้",
+    q: "ถ้ามีโรคประจำตัว ต้องทำยังไง?",
+    a: "บอกเราก่อนเริ่มโปรแกรม · เราจะปรับ stack และ protocol ให้เหมาะกับสถานะของคุณ · ในบางกรณีเราจะแนะนำให้พบแพทย์ยืนยันก่อน · ถ้ามีบางเคสที่เกินขอบเขตของ wellness coaching เราจะบอกตรงๆ · ความปลอดภัยมาก่อนรายได้เสมอ",
   },
   {
     q: "Community ต้องเป็นลูกค้าก่อนไหม?",
-    a: "ไม่ต้อง · ลอง Run Club / Forest Bathing ครั้งแรกฟรี · ถ้าชอบค่อยตัดสินใจต่อ · เป็น community ที่เปิดสำหรับคนสนใจ wellness ทุกคน",
+    a: "ไม่ต้อง · ลองเข้า Run Club หรือ Forest Bathing ครั้งแรกได้ฟรี · ถ้ารู้สึกใช่ค่อยตัดสินใจสมัครโปรแกรม · Community เปิดสำหรับทุกคนที่สนใจดูแลสุขภาพระยะยาว",
   },
 ];
 
@@ -192,68 +178,69 @@ export const COMMUNITY = [
   {
     key: "run",
     title: "UP Run Club",
-    blurb: "วิ่งกลุ่ม · ทุกระดับ · เน้นความสม่ำเสมอมากกว่าเร็ว",
-    schedule: "อาทิตย์ 6:00",
-    location: "สวนสาธารณะ / ทางวิ่ง",
+    blurb: "วิ่งกลุ่ม · ทุกระดับ · เน้นความสม่ำเสมอมากกว่าความเร็ว · มือใหม่เริ่มที่ 3 km ได้",
+    schedule: "ติดตามใน LINE OA",
+    location: "สวนสาธารณะ · ทางวิ่งในกรุงเทพฯ",
   },
   {
     key: "bike",
     title: "UP Bike",
-    blurb: "ปั่นจักรยาน · zone 2 cardio · longevity-grade endurance",
-    schedule: "เสาร์ 5:30",
-    location: "เส้นปั่น 30-50 km",
+    blurb: "ปั่นจักรยาน · zone 2 cardio · longevity-grade endurance · ขยับร่างกายแบบไม่กระแทกเข่า",
+    schedule: "ติดตามใน LINE OA",
+    location: "เส้นปั่นนอกเมือง 30-50 km",
   },
   {
     key: "icebath",
     title: "Ice Bath",
-    blurb: "Cold exposure · BAT activation · resilience training",
-    schedule: "เดือนละ 2 ครั้ง",
+    blurb: "Cold exposure · กระตุ้น brown fat · สร้างความอดทนของระบบประสาท",
+    schedule: "ติดตามใน LINE OA",
     location: "Studio · นัดล่วงหน้า",
   },
   {
     key: "forest",
     title: "Forest Bathing",
-    blurb: "Shinrin-yoku · ลด cortisol · เพิ่ม NK cells · phytoncides",
-    schedule: "เดือนละ 1 ครั้ง",
-    location: "ป่า/สวนใกล้เมือง",
+    blurb: "Shinrin-yoku · เดินในป่าช้าๆ · ลด cortisol · เพิ่ม NK cells · ได้รับ phytoncides",
+    schedule: "ติดตามใน LINE OA",
+    location: "ป่า / สวนใกล้กรุงเทพฯ",
   },
   {
     key: "board",
     title: "Board Game Night",
-    blurb: "Strategy + social bonding · cognitive longevity",
-    schedule: "ทุก 2 สัปดาห์",
-    location: "Cafe/Studio",
+    blurb: "เล่นบอร์ดเกมกับเพื่อนใหม่ · ฝึกคิดแบบ strategy · cognitive longevity training",
+    schedule: "ติดตามใน LINE OA",
+    location: "Café · Studio",
   },
   {
     key: "finance",
     title: "การเงินและชีวิต",
-    blurb: "Financial wellness workshop · บริหารเงิน · บริหารพลังงานชีวิต",
-    schedule: "เดือนละ 1 ครั้ง",
+    blurb: "Workshop วางแผนการเงินที่ใช้ได้จริง · เพราะ wellness ไม่ใช่แค่ร่างกาย",
+    schedule: "ติดตามใน LINE OA",
     location: "On-site + Online",
   },
   {
     key: "education",
     title: "Health Education",
-    blurb: "การอบรมความรู้สุขภาพ · longevity science · evidence-based",
-    schedule: "ทุกเดือน · 2 หัวข้อ",
+    blurb: "อบรมความรู้สุขภาพ · longevity science · เรื่องที่ไม่มีในตำราเรียน · evidence-based",
+    schedule: "ติดตามใน LINE OA",
     location: "Hybrid",
   },
 ];
 
 /* ─── Service Ladder (Courses) ───────────────── */
+/* Prices intentionally hidden on landing · driven to LINE consult */
 export const SERVICES = [
   {
     key: "free",
-    name: "Health Check (Free)",
-    eyebrow: "Lead Capture · ฟรี",
+    name: "Health Check",
+    eyebrow: "เริ่มที่นี่ · ฟรี",
     price: "ฟรี",
-    duration: "5-15 นาที",
-    tagline: "เริ่มจากประเมินตัวเองก่อน",
+    duration: "5-15 นาที · ทำได้บนหน้าเว็บ",
+    tagline: "เริ่มจากรู้จักตัวเองก่อนตัดสินใจอะไร",
     features: [
       "Health Check 14 ข้อ",
       "MetaFlex Quiz — Fat Adaptation score",
       "BCA Tracker · Body Composition",
-      "Auto-recommend tier ถัดไป",
+      "ระบบแนะนำเส้นทางถัดไปให้คุณ",
     ],
     cta: "ทำแบบประเมิน",
     href: "#assessment",
@@ -261,47 +248,50 @@ export const SERVICES = [
   {
     key: "uplabs",
     name: "UP Labs 14-day",
-    eyebrow: "Longevity Tier · Try",
-    price: "4,999 – 10,000",
-    duration: "14 วัน",
-    tagline: "แก่ช้า ไม่ป่วย ตายเลย",
+    eyebrow: "Longevity Tier · เริ่มลอง",
+    price: "ปรึกษาราคา",
+    duration: "14 วัน · self-care + support",
+    tagline: "เริ่มเปลี่ยนวิถีชีวิต · เห็นผลใน 2 สัปดาห์",
     features: [
       "Whole Food Diet + IF + Fat Adaptation",
-      "Sirtuins · mTOR · AMPK · Autophagy",
-      "ลด UPF · Low Carb High Protein",
+      "เรียนรู้ Sirtuins · mTOR · AMPK · Autophagy",
+      "ลด Ultra-processed · Low Carb High Protein",
       "ผลพลอยได้ น้ำหนัก −3 ถึง −5 kg",
+      "ทำซ้ำได้ปีละ 2-3 รอบ",
     ],
-    cta: "สมัคร UP Labs",
+    cta: "สอบถามทาง LINE",
     href: "#contact",
   },
   {
     key: "cgm",
     name: "CGM 14-day Reset",
-    eyebrow: "Diagnostic Add-on",
-    price: "+2,500 – 3,500",
-    duration: "14 วัน",
-    tagline: "window สู่ metabolic health ของตัวเอง",
+    eyebrow: "Diagnostic · Add-on",
+    price: "ปรึกษาราคา",
+    duration: "14 วัน · sensor + coaching",
+    tagline: "ดู metabolic ของคุณ real-time",
     features: [
       "FreeStyle Libre (Abbott · อย. ไทย)",
-      "Food + sleep + stress mapping",
-      "Personalized spike pattern",
-      "Coaching ทีมโภชนาการ",
+      "บันทึกอาหาร · นอน · stress",
+      "วิเคราะห์ pattern น้ำตาลขึ้น",
+      "Roadmap 14 วัน → ต่อ 90 วัน",
+      "ทีมโภชนาการดูแล · ไม่ใช่นักขาย",
     ],
-    cta: "เริ่ม CGM",
+    cta: "สอบถามทาง LINE",
     href: "#contact",
   },
   {
     key: "full",
     name: "Full Course 60-day",
-    eyebrow: "Anti-Aging Tier · Commit",
-    price: "38,000 – 50,000",
-    duration: "60 วัน · 4 phases × 14d",
-    tagline: "ย้อนวัย ย้อนอายุเซลล์ ยกเครื่องใหม่",
+    eyebrow: "Premium · 1:1 Personalized",
+    price: "ปรึกษาราคา",
+    duration: "60 วัน · 4 phases × 14 วัน",
+    tagline: "ยกเครื่องสุขภาพทั้งระบบ · 1:1",
     features: [
-      "Customized 1:1 · นัดติดตามรายสัปดาห์",
-      "Premium supplement stack · DoubleX + Triple Omega",
-      "Personalize Protocol ตามผลเลือด",
-      "ตั้งใจลด −8 ถึง −20 kg+",
+      "ปรับ BodyKey 4 phases ตามร่างกายคุณ",
+      "Premium stack · DoubleX + Triple Omega + B+ + Bio C + Probiotic",
+      "นัดติดตามรายสัปดาห์ · LINE 1:1 ทุกวัน",
+      "ตั้งใจ −8 ถึง −20 kg+ · anti-aging investment",
+      "ค่าโปรแกรม = 100% supplement · ไม่มี coaching fee แยก",
     ],
     cta: "นัดปรึกษา Full Course",
     href: "#contact",
@@ -400,13 +390,13 @@ export function suggestPath(a: QuizAnswers): {
   next: { label: string; href: string };
   alt?: { label: string; href: string };
 } {
-  // Urgency · health-first logic
+  // Urgency · always route to LINE consultation first · don't auto-prescribe
   if (a.urgency === "urgent") {
     return {
-      recommend: "Full Course 60-day",
-      reason: "ผลตรวจไม่ดี + ต้องการเปลี่ยนเร็ว → ต้องการ structured program ที่มี coach ดูแลใกล้ชิดและ stack ครบ",
-      next: { label: "นัดปรึกษา Full Course", href: "#contact" },
-      alt:  { label: "เริ่มที่ UP Labs ก่อนก็ได้", href: "#contact" },
+      recommend: "ปรึกษาทีมก่อน · ทาง LINE",
+      reason: "เคสที่ผลตรวจไม่ดีและต้องการเปลี่ยนเร็ว · ต้องการการประเมินเฉพาะตัวก่อน · ไม่ใช่โปรแกรมสำเร็จรูป · ทักทาง LINE เรามาดูข้อมูลของคุณก่อนแนะนำเส้นทาง",
+      next: { label: "ทักทาง LINE OA", href: "#contact" },
+      alt:  { label: "ดูบริการทั้งหมดก่อน", href: "#services" },
     };
   }
 
