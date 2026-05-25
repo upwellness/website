@@ -412,6 +412,177 @@ export const QUIZ = {
   ],
 };
 
+/* ═══════════════════════════════════════════════════════════════ */
+/* LANDING DESIGN v3 · data shapes that match UP Wellness.html      */
+/* ═══════════════════════════════════════════════════════════════ */
+
+/* Hero stats card (4 numbers, 2 cols × 2 rows) */
+export const LANDING_STATS = [
+  { value: "1,000+", label: "ลูกค้าดูแลโดยตรง" },
+  { value: "11 ปี",   label: "ประสบการณ์ดูแลสุขภาพ" },
+  { value: "12 ตัน",  label: "น้ำหนักลดรวม · 11 ปี" },
+  { value: "15+",     label: "Community Events / เดือน" },
+];
+
+/* 3 Pillars · About section */
+export const LANDING_PILLARS = [
+  {
+    n: "01",
+    accent: "wellness" as const,
+    title: "ลดน้ำหนัก ดูแลสุขภาพ",
+    th: "Foundation",
+    body: "เริ่มจากพื้นฐานที่ถูกต้อง · Metabolic Health · โภชนาการ · การเคลื่อนไหว · การนอน — ปรับเปลี่ยนวิถีชีวิตอย่างยั่งยืน ไม่ใช่แค่ลดเร็วแล้วกลับมา",
+  },
+  {
+    n: "02",
+    accent: "rose" as const,
+    title: "คอร์สเฉพาะบุคคล",
+    th: "Personalize",
+    body: "ออกแบบโปรแกรมจากข้อมูลคุณเอง · BCA · CGM · Wearable · เลือดและ Lab — ทีมที่ปรึกษาและโค้ชวิเคราะห์ให้แบบ 1-on-1",
+  },
+  {
+    n: "03",
+    accent: "science" as const,
+    title: "Longevity Protocol",
+    th: "Live longer",
+    body: "Science-backed protocol อิงงานวิจัย Longevity ระดับโลก · ติดตาม biomarkers ทุก 14 วัน · ปรับ supplement และ lifestyle อย่างต่อเนื่อง",
+  },
+];
+
+/* Programs · 3 tiers (Foundation / Personalize · featured / Longevity) */
+export const LANDING_PROGRAMS = [
+  {
+    tier: "Foundation",
+    price: "ปรึกษา",
+    cadence: "/ 8 สัปดาห์",
+    tag: "เริ่มต้นที่นี่",
+    accent: "wellness" as const,
+    points: [
+      "ประเมินสุขภาพเริ่มต้น · BCA + แบบสอบถาม",
+      "คอร์ส online + พื้นฐานโภชนาการ + การเคลื่อนไหว",
+      "Group coaching รายสัปดาห์",
+      "ติดตาม BCA ทุก 14 วัน",
+      "เข้า Community Events ทุก event",
+    ],
+  },
+  {
+    tier: "Personalize",
+    price: "ปรึกษา",
+    cadence: "/ 12 สัปดาห์",
+    tag: "ยอดนิยม",
+    accent: "rose" as const,
+    featured: true,
+    points: [
+      "ทุกอย่างใน Foundation",
+      "1-on-1 กับที่ปรึกษาสุขภาพ",
+      "ตรวจเลือด + Lab พื้นฐาน",
+      "CGM 14 วัน · วิเคราะห์ glucose response",
+      "Personalized Nutrilite stack",
+      "Wearable integration + biomarker tracking",
+    ],
+  },
+  {
+    tier: "Longevity Protocol",
+    price: "ปรึกษา",
+    cadence: "/ 6 เดือน",
+    tag: "ยกระดับ",
+    accent: "science" as const,
+    points: [
+      "ทุกอย่างใน Personalize",
+      "Advanced Lab · Hormone · Inflammation · ApoB",
+      "ตรวจ Biological Age (Epigenetic) เริ่มต้น + 6 เดือน",
+      "1-on-1 กับที่ปรึกษา + โค้ชชีพ รายสัปดาห์",
+      "Custom Longevity Protocol อิงงานวิจัย",
+      "เข้าถึง Specialist Network",
+    ],
+  },
+];
+
+/* Community bento (8 items with design's tag/time/where/tone/emoji shape) */
+export const LANDING_COMMUNITY = [
+  { tag: "Movement",  title: "UP Run Club",        time: "ทุกวันเสาร์",        where: "สวนสาธารณะ กทม.",   blurb: "วิ่งกลุ่ม · ทุกระดับ · เน้นความสม่ำเสมอมากกว่าความเร็ว · มือใหม่เริ่มที่ 3 km ได้",                tone: "wellness" as const, emoji: "🏃" },
+  { tag: "Movement",  title: "UP Bike",            time: "ทุกอาทิตย์",         where: "เส้นปั่นนอกเมือง",   blurb: "ปั่นเป็นกลุ่ม · zone 2 cardio · longevity-grade endurance · ขยับร่างกายไม่กระแทกเข่า",          tone: "science" as const,  emoji: "🚴" },
+  { tag: "Recovery",  title: "Ice Bath",           time: "ทุก 2 สัปดาห์",       where: "Studio · กทม.",      blurb: "Cold exposure 3 นาที × 3 รอบ · ฝึก autonomic resilience · มีทีมโค้ชกำกับดูแล",                tone: "science" as const,  emoji: "🧊" },
+  { tag: "Recovery",  title: "Forest Bathing",     time: "เดือนละครั้ง",        where: "เขาใหญ่ / กาญฯ",     blurb: "Shinrin-yoku ปลีกเข้าป่า ปิดมือถือ ฟังธรรมชาติ — ลด cortisol คืน parasympathetic system",       tone: "wellness" as const, emoji: "🌲" },
+  { tag: "Mind",      title: "Board Game Night",   time: "ทุกสัปดาห์",         where: "UP Lounge",          blurb: "เกมกระดานเพื่อ cognitive longevity — Wingspan, Catan, Splendor · พบเพื่อนใหม่ในชุมชน",         tone: "amber" as const,    emoji: "🎲" },
+  { tag: "Mind",      title: "การเงินและชีวิต",     time: "เดือนละครั้ง",        where: "Online + On-site",   blurb: "วงสนทนาการเงินส่วนบุคคล · วางแผนเกษียณ + life design — สุขภาพการเงินคือสุขภาพด้วย",            tone: "rose" as const,     emoji: "💰" },
+  { tag: "Education", title: "Knowledge Series",   time: "ทุก 2 สัปดาห์",       where: "Online Webinar",     blurb: "อบรมโดยทีมผู้เชี่ยวชาญ — Metabolic · Hormone · Sleep · Nutrition · Longevity",                tone: "amber" as const,    emoji: "📚" },
+  { tag: "Education", title: "Cooking Class",      time: "เดือนละครั้ง",        where: "UP Kitchen",         blurb: "เรียนทำอาหาร low-glycemic + high-protein · ทำเองได้ที่บ้าน · นำกลับบ้านได้",                  tone: "rose" as const,     emoji: "🥗" },
+];
+
+/* Supplement categories (4 buckets, mapped to Nutrilite stack) */
+export const LANDING_SUPPLEMENT_CATEGORIES = [
+  { name: "Foundation",     items: "Double X · Triple Omega · Vitamin D · Cal Mag D · Bio C",         accent: "wellness" as const },
+  { name: "Metabolic",      items: "Calow · CLA · Fiber Powder · Chewable Fiber",                       accent: "rose" as const },
+  { name: "Longevity",      items: "CoQ10 Plus · Lingzhi · Cistanche · Ginkgo Plus · Siberian Ginseng", accent: "science" as const },
+  { name: "Sleep & Stress", items: "Jujube Nite (GABA) · Lecithin E · Probiotic W",                    accent: "amber" as const },
+];
+
+/* Transformations · 3 case studies (story rows with start + end image slot + metrics) */
+export const LANDING_TRANSFORMATIONS = [
+  {
+    name: "คุณ A", age: 45, role: "ผู้บริหาร",
+    period: "90 วัน",
+    program: "Full Course",
+    startLabel: "Day 0",
+    endLabel: "Day 90",
+    quote: "ลดน้ำหนักไม่ใช่เป้าหมายหลัก — เป้าหมายคือกลับมามีพลังเหมือนตอนอายุ 30 และตับไม่มีไขมันพอกอีก",
+    metrics: [
+      { v: "−12 kg",  l: "น้ำหนัก" },
+      { v: "NAFLD → ปกติ", l: "ตับ" },
+      { v: "+22%",    l: "พลังงาน" },
+    ],
+    tone: "rose" as const,
+  },
+  {
+    name: "คุณ B", age: 52, role: "นักธุรกิจ",
+    period: "60 วัน · 2 รอบ",
+    program: "Full Course",
+    startLabel: "เริ่มต้น",
+    endLabel: "60 วัน",
+    quote: "ไขมันหุ้มอวัยวะภายใน (Visceral Fat) ลดครึ่งหนึ่ง · ตื่นเช้าสดชื่นเหมือนกลับเป็นวัยรุ่น · ทำงานได้ทั้งวันไม่ล้า",
+    metrics: [
+      { v: "12 → 6",   l: "Visceral Fat" },
+      { v: "−9 kg",    l: "น้ำหนัก" },
+      { v: "+1.8 kg",  l: "Muscle" },
+    ],
+    tone: "wellness" as const,
+  },
+  {
+    name: "คุณ C", age: 38, role: "freelancer",
+    period: "เริ่มที่ community",
+    program: "Community → UP Labs",
+    startLabel: "เริ่มต้น",
+    endLabel: "ปัจจุบัน",
+    quote: "เริ่มจาก UP Run Club ทุกเสาร์ · ต่อ UP Labs · ตอนนี้ชีวิตอยู่กับคนที่อยากดูแลสุขภาพเหมือนกัน · ไม่ได้เปลี่ยนแค่น้ำหนัก แต่เปลี่ยนทั้งวิถี",
+    metrics: [
+      { v: "8 events/mo", l: "Community" },
+      { v: "−6 kg",       l: "น้ำหนัก" },
+      { v: "+12 hr",      l: "Sleep/wk" },
+    ],
+    tone: "amber" as const,
+  },
+];
+
+/* Testimonials · dark section (3 quotes) */
+export const LANDING_TESTIMONIALS = [
+  {
+    name: "คุณ A", age: 45, role: "ผู้บริหาร",
+    quote: "เริ่มจาก Foundation 8 สัปดาห์ ลด 6 kg และไขมันในตับลดจริง · ตอนนี้อยู่ Longevity Protocol รู้สึกแข็งแรงกว่า 10 ปีที่แล้ว",
+    result: "−12 kg · NAFLD ปกติ",
+  },
+  {
+    name: "คุณ B", age: 52, role: "นักธุรกิจ",
+    quote: "ชอบที่นี่เพราะอ้างอิงงานวิจัย ไม่ขายฝัน · ทีมที่ปรึกษาอธิบายทุกขั้นตอน เห็นผลจาก BCA ทุก 14 วัน",
+    result: "Visceral 12 → 6",
+  },
+  {
+    name: "คุณ C", age: 38, role: "freelancer",
+    quote: "Community ทำให้เปลี่ยนได้จริง · Run Club ทุกเสาร์ และ Board Game ทุกพฤหัส กลายเป็นวิถีชีวิตใหม่",
+    result: "+8 events/เดือน",
+  },
+];
+
 /* ─── Quiz suggestion engine ───────────────── */
 export type QuizAnswers = Record<string, string>;
 

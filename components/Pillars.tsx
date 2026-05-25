@@ -1,66 +1,76 @@
-import { Check, Activity, Sparkles, Users } from "lucide-react";
-import { PILLARS } from "@/lib/content";
+/* About + 3 Pillars + Process strip · matches design */
+import { SectionHeader } from "./SectionHeader";
+import { LANDING_PILLARS } from "@/lib/content";
 
-const ICONS = [Activity, Sparkles, Users];
+const ACCENT_COLORS = {
+  wellness: { bg: "bg-wellness-ultra", text: "text-wellness-deep", dot: "bg-wellness" },
+  rose:     { bg: "bg-rose-ultra",     text: "text-rose-deep",     dot: "bg-rose" },
+  science:  { bg: "bg-science-ultra",  text: "text-science-deep",  dot: "bg-science" },
+};
 
 export function Pillars() {
   return (
-    <section id="pillars" className="px-6 py-24 md:py-32">
-      <div className="mx-auto max-w-7xl">
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <p className="section-eyebrow">What We Do</p>
-          <h2 className="mt-4 font-serif text-[40px] md:text-[64px] font-semibold text-ink leading-[1.05] tracking-tight">
-            3 มิติ · <em className="text-rose not-italic italic">1 ระบบ</em>
-          </h2>
-          <p className="mt-5 text-[16px] md:text-[18px] text-ink-60 leading-relaxed">
-            ลดน้ำหนัก · ดูแลสุขภาพ · Longevity ทำงานเชื่อมกัน · ไม่ใช่บริการแยกเรื่อง
+    <section id="about" className="relative mx-auto max-w-content px-6 lg:px-10 py-20 lg:py-28">
+      <SectionHeader
+        number="01"
+        label="What we do"
+        title={
+          <>
+            เราไม่ขายความผอม.
             <br />
-            เรา map รายคน เริ่มจากจุดที่คุณอยู่
-          </p>
-        </div>
+            <span className="italic text-rose">เราออกแบบชีวิต</span> ที่ยืนยาวและสนุก.
+          </>
+        }
+        description="UP Wellness รวมที่ปรึกษาสุขภาพ · โค้ช · นักโภชนาการ · และคอมมูนิตี้ ในที่เดียว — เพื่อพาคนคนหนึ่งจากจุดเริ่ม ไปสู่สุขภาพและอายุที่ยืนยาวอย่างมีคุณภาพ"
+      />
 
-        {/* Bento layout · Big primary + 2 medium */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ink/8 rounded-[28px] overflow-hidden border border-ink/8">
-          {PILLARS.map((p, idx) => {
-            const Icon = ICONS[idx];
-            const isFeatured = idx === 0; // Weight (ลดน้ำหนัก) is the lead pillar
-            return (
-              <article
-                key={p.key}
-                className={`bg-cream/95 backdrop-blur-md p-8 md:p-10 lg:p-12 ${
-                  isFeatured ? "md:col-span-3 lg:col-span-1" : ""
-                }`}
-              >
-                <div className="flex items-start justify-between mb-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-mist text-rose">
-                    <Icon size={22} strokeWidth={2.25} aria-hidden="true" />
-                  </div>
-                  <span className="font-mono text-[9.5px] uppercase tracking-[0.16em] text-ink-40 mt-2">
-                    0{idx + 1} / 03
-                  </span>
+      <div className="grid lg:grid-cols-3 gap-5 lg:gap-6">
+        {LANDING_PILLARS.map((p) => {
+          const c = ACCENT_COLORS[p.accent];
+          return (
+            <div
+              key={p.n}
+              className="group relative overflow-hidden rounded-3xl border border-ink-10 bg-white p-7 lg:p-8 transition-all hover:-translate-y-1 hover:border-ink-20 card-ring"
+            >
+              <div className={`absolute -top-16 -right-16 h-44 w-44 rounded-full ${c.bg} blur-2xl opacity-60`} />
+              <div className="relative">
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-[10px] font-bold text-ink-40">{p.n}</span>
+                  <span className={`h-1.5 w-1.5 rounded-full ${c.dot}`} />
+                  <span className={`font-mono text-[10px] font-bold uppercase tracking-[0.14em] ${c.text}`}>{p.th}</span>
                 </div>
-
-                <p className="font-mono text-[10.5px] uppercase tracking-[0.18em] text-rose font-medium">
-                  {p.eyebrow}
-                </p>
-                <h3 className="mt-2 font-serif text-[32px] md:text-[40px] font-semibold text-ink leading-[1.1] tracking-tight">
+                <h3 className="mt-5 font-display font-medium tracking-tight text-ink text-[30px] leading-[1.2]">
                   {p.title}
                 </h3>
-                <p className="mt-4 text-[15px] md:text-[16px] text-ink leading-[1.7]">
-                  {p.blurb}
-                </p>
+                <p className="mt-4 font-thai text-[14.5px] leading-[1.75] text-ink-60">{p.body}</p>
+                <div className="mt-7 inline-flex items-center gap-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-ink group-hover:text-rose transition-colors">
+                  เรียนรู้เพิ่มเติม
+                  <span className="transition-transform group-hover:translate-x-0.5">→</span>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
 
-                <ul className="mt-7 space-y-3 pt-6 border-t border-ink/8">
-                  {p.points.map(pt => (
-                    <li key={pt} className="flex items-start gap-3 text-[14px] text-ink-60 leading-relaxed">
-                      <Check size={15} strokeWidth={2.5} className="mt-0.5 text-rose flex-shrink-0" aria-hidden="true" />
-                      <span>{pt}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            );
-          })}
+      {/* Process strip · 4 steps */}
+      <div className="mt-16 lg:mt-20 rounded-3xl border border-ink-10 bg-surface/60 p-8 lg:p-10">
+        <div className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink-40 font-bold mb-6">
+          How it works · 4 ขั้นตอน
+        </div>
+        <div className="grid md:grid-cols-4 gap-6 lg:gap-8">
+          {[
+            ["01", "ประเมิน", "Health Check + MetaFlex Quiz · ดูจุดเริ่มต้น"],
+            ["02", "วัดและวิเคราะห์", "BCA · CGM · เลือด · ทีมที่ปรึกษาอ่านผลให้"],
+            ["03", "ออกแบบ Protocol", "Course + Supplement + Lifestyle ตามตัวคุณ"],
+            ["04", "ติดตามต่อเนื่อง", "วัดซ้ำทุก 14 วัน · ปรับ · Community · 24/7 support"],
+          ].map(([n, t, b]) => (
+            <div key={n} className="relative">
+              <div className="font-mono text-[11px] text-rose font-bold">{n}</div>
+              <div className="mt-2 font-display text-[22px] tracking-tight text-ink leading-[1.2]">{t}</div>
+              <div className="mt-1.5 font-thai text-[13px] text-ink-60 leading-relaxed">{b}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

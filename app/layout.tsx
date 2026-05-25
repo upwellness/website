@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Sarabun, JetBrains_Mono } from "next/font/google";
+import { Manrope, Fraunces, Inter, Sarabun, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-serif-runtime",
-  weight: ["400", "500", "600", "700"],
+const manrope = Manrope({
+  variable: "--font-head-runtime",
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+});
+const fraunces = Fraunces({
+  variable: "--font-display-runtime",
+  weight: ["300", "400", "500", "600"],
   style: ["normal", "italic"],
+  subsets: ["latin"],
+});
+const inter = Inter({
+  variable: "--font-body-runtime",
+  weight: ["300", "400", "500", "600"],
   subsets: ["latin"],
 });
 const sarabun = Sarabun({
@@ -20,7 +30,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "UP Wellness · Science-based Longevity & Wellness Community",
+  title: "UP Wellness — Live longer. Live better. ดูแลสุขภาพ ดูแลชีวิต ดูแลอายุขัย",
   description: "ที่ปรึกษาสุขภาพมืออาชีพ · โปรแกรมลดน้ำหนัก · Longevity Protocol · Community วิ่ง ปั่น Ice Bath และอื่นๆ · evidence-based · personalized",
   keywords: ["UP Wellness", "longevity", "wellness", "ลดน้ำหนัก", "ดูแลสุขภาพ", "Nutrilite", "biohacking", "community"],
   openGraph: {
@@ -37,10 +47,10 @@ export default function RootLayout({
   return (
     <html
       lang="th"
-      className={`${cormorant.variable} ${sarabun.variable} ${jetbrains.variable} h-full antialiased`}
+      className={`${manrope.variable} ${fraunces.variable} ${inter.variable} ${sarabun.variable} ${jetbrains.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <div className="aurora-bg" aria-hidden="true"><div className="aurora-orb-3" /></div>
+      <body className="min-h-full flex flex-col font-body bg-warm-white text-ink">
+        <div className="grain" aria-hidden="true" />
         {children}
       </body>
     </html>

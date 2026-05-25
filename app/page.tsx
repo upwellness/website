@@ -1,39 +1,30 @@
+/* UP Wellness landing · sections in design's exact order */
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { ProofBar } from "@/components/ProofBar";
-import { Manifesto } from "@/components/Manifesto";
 import { Pillars } from "@/components/Pillars";
-import { Process } from "@/components/Process";
-import { Transformations } from "@/components/Transformations";
-import { Community } from "@/components/Community";
 import { Services } from "@/components/Services";
-import { Philosophy } from "@/components/Philosophy";
+import { Community } from "@/components/Community";
 import { Assessment } from "@/components/Assessment";
+import { Transformations } from "@/components/Transformations";
+import { Supplements } from "@/components/Supplements";
 import { Testimonials } from "@/components/Testimonials";
-import { FAQ } from "@/components/FAQ";
-import { Contact } from "@/components/Contact";
+import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <main className="relative min-h-screen bg-warm-white">
       <Header />
-      <main className="flex-1">
-        <Hero />
-        <ProofBar />
-        <Manifesto />
-        <Pillars />
-        <Process />
-        <Transformations />
-        <Community />
-        <Services />
-        <Philosophy />
-        <Assessment />
-        <Testimonials />
-        <FAQ />
-        <Contact />
-      </main>
+      <Hero />
+      <Pillars />
+      <Services />
+      <Community />
+      <Assessment />
+      <Transformations />
+      <Supplements />
+      <Testimonials />
+      <FinalCTA />
       <Footer />
-    </>
+    </main>
   );
 }

@@ -1,49 +1,84 @@
+/* Footer · matches UP Wellness.html design */
+import { UPLogo } from "./UPLogo";
 import { SITE } from "@/lib/content";
 
+const SECTIONS: [string, [string, string][]][] = [
+  [
+    "Explore",
+    [
+      ["#about", "About"],
+      ["#programs", "Programs"],
+      ["#community", "Community"],
+      ["#supplements", "Supplements"],
+    ],
+  ],
+  [
+    "Tools",
+    [
+      ["#assessment", "Health Check"],
+      ["#assessment", "MetaFlex Quiz"],
+      ["#", "Member Portal"],
+      ["#", "Coach Login"],
+    ],
+  ],
+];
+
 export function Footer() {
+  const contact: [string, string][] = [
+    [`mailto:${SITE.email}`, SITE.email],
+    [`https://line.me/R/ti/p/~${SITE.lineOA}`, `LINE · ${SITE.lineOA}`],
+    ["#", "Bangkok · Thailand"],
+    [`https://facebook.com/${SITE.facebook}`, `Facebook · @${SITE.facebook}`],
+  ];
+
   return (
-    <footer className="liquid-dark mt-16 px-6 py-12">
-      <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-8 text-cream">
-        <div>
-          <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-rose text-cream font-bold text-sm">UP</span>
-            <span className="font-serif text-xl font-semibold">{SITE.brand}</span>
+    <footer className="relative bg-ink py-16 text-white/60">
+      <div className="mx-auto max-w-content px-6 lg:px-10">
+        <div className="grid gap-10 pb-12 md:grid-cols-[2fr_1fr_1fr_1fr] border-b border-white/10">
+          <div>
+            <UPLogo size="lg" inverted />
+            <p className="mt-6 max-w-sm font-thai text-sm leading-[1.8] text-white/45">
+              Science-based · Coach-led · Community-driven · บ้านของคนที่เลือกจะอยู่ดีอย่างมีคุณภาพ ตลอดชีวิตที่ยืนยาว
+            </p>
+            <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1.5 text-[10px] font-mono uppercase tracking-[0.14em] text-white/60">
+              <span className="relative h-1.5 w-1.5">
+                <span className="absolute inset-0 rounded-full bg-status-optimal" />
+                <span className="absolute inset-0 rounded-full bg-status-optimal animate-ping opacity-70" />
+              </span>
+              Open · Bangkok · 2026
+            </div>
           </div>
-          <p className="text-[12.5px] text-cream/70 leading-relaxed">
-            {SITE.tagline}
-          </p>
-          <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-rose-soft">
-            Science-based · Personalized · Longevity-first
-          </p>
+          {SECTIONS.map(([title, links]) => (
+            <div key={title}>
+              <div className="mb-4 text-[10px] font-bold uppercase tracking-[0.14em] text-white/30">{title}</div>
+              <ul className="space-y-2.5 text-sm text-white/55">
+                {links.map(([h, l]) => (
+                  <li key={l}>
+                    <a href={h} className="hover:text-white transition-colors">
+                      {l}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <div>
+            <div className="mb-4 text-[10px] font-bold uppercase tracking-[0.14em] text-white/30">Contact</div>
+            <ul className="space-y-2.5 text-sm text-white/55">
+              {contact.map(([h, l]) => (
+                <li key={l}>
+                  <a href={h} target={h.startsWith("http") ? "_blank" : undefined} rel={h.startsWith("http") ? "noopener" : undefined} className="hover:text-white transition-colors break-all">
+                    {l}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-
-        <div>
-          <h4 className="font-mono text-[10px] uppercase tracking-widest text-cream/50 mb-3">บริการ</h4>
-          <ul className="space-y-1.5 text-[13px]">
-            <li><a href="#services" className="hover:text-rose-soft transition">Health Check (ฟรี)</a></li>
-            <li><a href="#services" className="hover:text-rose-soft transition">UP Labs 14-day</a></li>
-            <li><a href="#services" className="hover:text-rose-soft transition">CGM Reset</a></li>
-            <li><a href="#services" className="hover:text-rose-soft transition">Full Course 60-day</a></li>
-          </ul>
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-6 font-mono text-[11px] text-white/30">
+          <span>© {new Date().getFullYear()} UP Wellness Co., Ltd.</span>
+          <span>upwellness.co · live longer · live better</span>
         </div>
-
-        <div>
-          <h4 className="font-mono text-[10px] uppercase tracking-widest text-cream/50 mb-3">ติดต่อ</h4>
-          <ul className="space-y-1.5 text-[13px]">
-            <li><a href={`https://line.me/R/ti/p/~${SITE.lineOA}`} target="_blank" rel="noopener" className="hover:text-rose-soft transition">LINE OA · {SITE.lineOA}</a></li>
-            <li><a href={`mailto:${SITE.email}`} className="hover:text-rose-soft transition break-all">{SITE.email}</a></li>
-            <li><a href={`https://facebook.com/${SITE.facebook}`} target="_blank" rel="noopener" className="hover:text-rose-soft transition">Facebook · @{SITE.facebook}</a></li>
-            <li><a href={`https://instagram.com/${SITE.instagram}`} target="_blank" rel="noopener" className="hover:text-rose-soft transition">Instagram · @{SITE.instagram}</a></li>
-          </ul>
-          <p className="mt-4 font-thai text-[11px] text-cream/50 leading-relaxed">
-            ⚖️ ข้อมูลใน website เพื่อ wellness coaching · ไม่ทดแทนการวินิจฉัยทางการแพทย์
-          </p>
-        </div>
-      </div>
-
-      <div className="mx-auto max-w-7xl mt-10 pt-6 border-t border-cream/10 flex flex-wrap justify-between items-center gap-3 text-[11px] font-mono text-cream/50">
-        <span>© {new Date().getFullYear()} {SITE.brand} · All rights reserved</span>
-        <span className="text-cream/30">v1.0 · Built with care</span>
       </div>
     </footer>
   );
