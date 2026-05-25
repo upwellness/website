@@ -4,6 +4,7 @@ import { ProofBar } from "@/components/ProofBar";
 import { Manifesto } from "@/components/Manifesto";
 import { Pillars } from "@/components/Pillars";
 import { Process } from "@/components/Process";
+import { Transformations } from "@/components/Transformations";
 import { Community } from "@/components/Community";
 import { Services } from "@/components/Services";
 import { Philosophy } from "@/components/Philosophy";
@@ -23,6 +24,7 @@ export default function Home() {
         <Manifesto />
         <Pillars />
         <Process />
+        <Transformations />
         <Community />
         <Services />
         <Philosophy />

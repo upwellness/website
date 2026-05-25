@@ -306,6 +306,37 @@ export const STATS = [
   { value: "98%",   label: "ความพึงพอใจ" },
 ];
 
+/* ─── Journeys · "Transformations" (never call them before/after) ─── */
+export const JOURNEYS = [
+  {
+    metric: "−12 kg",
+    period: "90 วัน",
+    persona: "ผู้บริหาร · 45 ปี",
+    headline: "จาก NAFLD กลับมาเป็นตัวเองอีกครั้ง",
+    detail: "ไขมันพอกตับลด · pre-diabetes กลับมาปกติ · นอนหลับลึกขึ้น · ไม่ต้องอด ไม่ต้องหิว",
+    tags: ["Full Course", "BCA", "CGM"],
+    accent: "rose",
+  },
+  {
+    metric: "Visceral 12 → 6",
+    period: "2 รอบ · 60 วัน",
+    persona: "นักธุรกิจ · 52 ปี",
+    headline: "พลังงานกลับมา · เหมือนเด็กลง 10 ปี",
+    detail: "ไขมันหุ้มอวัยวะภายในลดครึ่งหนึ่ง · ตื่นเช้าสดชื่น · ทำงานได้ทั้งวันไม่ล้า",
+    tags: ["Longevity", "Sleep", "Energy"],
+    accent: "green",
+  },
+  {
+    metric: "+8 events/เดือน",
+    period: "เริ่มที่ community",
+    persona: "freelancer · 38 ปี",
+    headline: "จากคนเหงา · เป็นคนที่มี community ที่ดี",
+    detail: "เริ่มจาก UP Run Club · ต่อด้วย UP Labs · ตอนนี้ชีวิตอยู่กับคนที่อยากดูแลสุขภาพเหมือนกัน",
+    tags: ["Run Club", "Community", "Lifestyle"],
+    accent: "gold",
+  },
+];
+
 /* ─── Testimonials ─────────────────────────── */
 export const TESTIMONIALS = [
   {
