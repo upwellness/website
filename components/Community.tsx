@@ -81,22 +81,34 @@ export function Community() {
           })}
         </div>
 
-        {/* Membership CTA strip */}
-        <div className="mt-10 flex items-center justify-between rounded-3xl bg-ink p-7 lg:p-8 text-white">
-          <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/40 font-bold mb-2">
-              Membership · ฟรีสำหรับลูกค้าทุกเลเวล
+        {/* Membership CTA strip · with real community group photo backdrop */}
+        <div className="relative mt-10 overflow-hidden rounded-3xl p-7 lg:p-8 text-white">
+          {/* Backdrop photo */}
+          <Image
+            src="/img/com-membership.jpg"
+            alt="UP Wellness community gathering at Secret Garden"
+            fill
+            sizes="(min-width: 1024px) 1200px, 100vw"
+            className="object-cover"
+          />
+          {/* Dark gradient overlay for text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/75 to-ink/40" />
+          <div className="relative flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/60 font-bold mb-2">
+                Membership · ฟรีสำหรับลูกค้าทุกเลเวล
+              </div>
+              <div className="font-display text-[24px] lg:text-[28px] font-medium tracking-tight leading-snug">
+                เข้าร่วมได้ทุก event · ไม่จำกัด
+              </div>
             </div>
-            <div className="font-display text-[24px] lg:text-[28px] font-medium tracking-tight leading-snug">
-              เข้าร่วมได้ทุก event · ไม่จำกัด
-            </div>
+            <a
+              href="#assessment"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-[13px] font-bold text-ink hover:-translate-y-px transition-all shadow-lg"
+            >
+              เข้าร่วม <span>→</span>
+            </a>
           </div>
-          <a
-            href="#assessment"
-            className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-[13px] font-bold text-ink hover:-translate-y-px transition-all"
-          >
-            เข้าร่วม <span>→</span>
-          </a>
         </div>
       </div>
     </section>
