@@ -1,4 +1,5 @@
 /* Community bento · 8 items · matches UP Wellness.html design */
+import Image from "next/image";
 import { SectionHeader } from "./SectionHeader";
 import { LANDING_COMMUNITY } from "@/lib/content";
 
@@ -46,15 +47,24 @@ export function Community() {
                 key={c.title}
                 className={`${SPANS[i]} group relative overflow-hidden rounded-3xl ${t.glass} glass-shine p-5 lg:p-6 transition-all duration-500 hover:-translate-y-1 hover:rotate-[-0.4deg]`}
               >
-                {/* Image slot strip at top */}
-                <div className="relative h-28 lg:h-32 overflow-hidden rounded-2xl img-slot mb-5" data-label={c.title.toLowerCase()}>
-                  <div className="absolute top-2.5 left-2.5">
+                {/* Image strip at top — real photo if available, else patterned placeholder */}
+                <div className={`relative h-28 lg:h-32 overflow-hidden rounded-2xl mb-5 ${c.img ? "" : "img-slot"}`} data-label={c.img ? undefined : c.title.toLowerCase()}>
+                  {c.img && (
+                    <Image
+                      src={c.img}
+                      alt={`${c.title} · ${c.tag}`}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className="object-cover"
+                    />
+                  )}
+                  <div className="absolute top-2.5 left-2.5 z-10">
                     <span className="inline-flex items-center gap-1 rounded-full bg-white/85 backdrop-blur px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] font-bold text-ink-80">
                       <span className={`h-1 w-1 rounded-full ${t.dot}`} />
                       {c.tag}
                     </span>
                   </div>
-                  <div className="absolute bottom-2.5 right-2.5 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 backdrop-blur text-lg shadow-sm">
+                  <div className="absolute bottom-2.5 right-2.5 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 backdrop-blur text-lg shadow-sm z-10">
                     {c.emoji}
                   </div>
                 </div>

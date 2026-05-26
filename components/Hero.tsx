@@ -1,4 +1,5 @@
 /* Hero · matches UP Wellness.html design — mesh atmosphere + stacked tilted glass cards */
+import Image from "next/image";
 import { LANDING_STATS } from "@/lib/content";
 
 export function Hero() {
@@ -85,16 +86,27 @@ export function Hero() {
             {/* ─ Back image card · tilted +5° ─ */}
             <div className="absolute top-0 right-0 w-[78%] h-[300px] lg:h-[340px] rotate-[5deg] origin-bottom-left">
               <div className="relative h-full w-full overflow-hidden rounded-[28px] glass-rose glass-shine">
-                <div className="absolute inset-3 rounded-[22px] img-slot" data-label="lifestyle · community" />
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-rose/90 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.16em] text-white">
+                <div className="absolute inset-3 rounded-[22px] overflow-hidden">
+                  <Image
+                    src="/img/hero-lifestyle.jpg"
+                    alt="UP Wellness · Run Club at golden hour · Bangkok"
+                    fill
+                    sizes="(min-width: 1024px) 36vw, 78vw"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-rose/90 backdrop-blur px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.16em] text-white">
                     <span className="h-1 w-1 rounded-full bg-white" />
                     UP · Lifestyle
                   </span>
-                  <span className="font-mono text-[10px] text-rose-deep/70">№ 03</span>
+                  <span className="font-mono text-[10px] text-white/95 bg-rose-deep/60 backdrop-blur px-2 py-0.5 rounded-full">№ 03</span>
                 </div>
-                <div className="absolute bottom-4 left-4 right-4 font-thai text-[12.5px] text-rose-deep/85 leading-snug">
-                  ภาพชุมชน · กิจกรรม · บรรยากาศจริง
+                <div className="absolute bottom-4 left-4 right-4 z-10">
+                  <div className="inline-block rounded-xl bg-white/85 backdrop-blur px-3 py-1.5 font-thai text-[12.5px] text-ink leading-snug">
+                    ภาพชุมชน · กิจกรรม · บรรยากาศจริง
+                  </div>
                 </div>
               </div>
             </div>
