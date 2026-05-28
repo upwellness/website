@@ -7,7 +7,6 @@ import { Community } from "@/components/Community";
 import { Assessment } from "@/components/Assessment";
 import { Transformations } from "@/components/Transformations";
 import { Supplements } from "@/components/Supplements";
-import { Resources } from "@/components/Resources";
 import { Testimonials } from "@/components/Testimonials";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
@@ -23,7 +22,6 @@ export default function Home() {
       <Assessment />
       <Transformations />
       <Supplements />
-      <Resources />
       <Testimonials />
       <FinalCTA />
       <Footer />

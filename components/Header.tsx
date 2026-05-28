@@ -6,7 +6,6 @@ const LINKS: [string, string][] = [
   ["#programs", "Programs"],
   ["#community", "Community"],
   ["#supplements", "Supplements"],
-  ["#resources", "Resources"],
   ["#assessment", "Assessment"],
 ];
 
